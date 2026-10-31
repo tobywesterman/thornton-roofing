@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T16:00:00Z",
+  "title": "Design System: Thornton's Roofing",
+  "extensions": {
+    "colorMeta": {
+      "charcoal": { "role": "neutral", "displayName": "Logo Charcoal" },
+      "roof-green": { "role": "primary", "displayName": "Roof Green" },
+      "stone": { "role": "neutral", "displayName": "Warm Stone" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only." },
+      "heading": { "displayName": "Section heading", "purpose": "Every section H2, uppercase." }
+    },
+    "shadows": [
+      { "name": "header-stuck", "value": "0 6px 20px -12px rgba(12,24,27,0.35)", "purpose": "Under the sticky header once scrolled." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Section entry rise and link arrows; disabled under reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "600px" }, { "name": "md", "value": "960px" }, { "name": "lg", "value": "1100px" }
+    ]
+  },
+  "components": [
+    { "name": "Primary Button", "kind": "button", "refersTo": "button-primary", "description": "The Request a Free Quote action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Request a Free Quote</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;background:#036a37;color:#fff;font:700 13px Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s}.ds-btn-primary:hover{background:#024f29}.ds-btn-primary:focus-visible{outline:3px solid #036a37;outline-offset:3px}" },
+    { "name": "Outline Button", "kind": "button", "refersTo": "button-outline", "description": "Secondary action.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">View Our Services</a>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:2px solid #0c181b;color:#0c181b;font:700 13px Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s,color .2s}.ds-btn-outline:hover{background:#0c181b;color:#fff}" },
+    { "name": "Text Input", "kind": "input", "refersTo": "input", "description": "Quote form field.",
+      "html": "<input class=\"ds-input\" placeholder=\"Postcode\">",
+      "css": ".ds-input{min-height:50px;padding:12px 14px;border:1.5px solid #8f9a9c;border-radius:2px;font:17px 'Source Sans 3',sans-serif;color:#0c181b}.ds-input:focus-visible{outline:none;border-color:#036a37;box-shadow:0 0 0 3px rgba(3,106,55,.28)}" },
+    { "name": "Heading Rule", "kind": "custom", "description": "Green double rule from the logo's ROOFING rules, under section headings.",
+      "html": "<span class=\"ds-rule\"></span>",
+      "css": ".ds-rule{display:flex;gap:6px}.ds-rule::before,.ds-rule::after{content:'';height:4px;background:#036a37}.ds-rule::before{width:48px}.ds-rule::after{width:12px}" }
+  ],
+  "narrative": {
+    "northStar": "The Firm's Own Signboard",
+    "keyCharacteristics": ["Charcoal and roof green from the logo, on white and warm stone.", "Montserrat 800 uppercase headings echoing the logo's lettering; Source Sans 3 for reading.", "A short green double rule under headings, taken from the rules either side of ROOFING in the logo.", "Hairline-ruled grids instead of shadowed cards.", "Solid charcoal panels over photos, never a full-image wash."],
+    "rules": [
+      { "name": "The Logo-Only Rule", "body": "No colour enters the UI that is not in the logo or a neutral. The hero's orange belongs to the photograph and is never sampled.", "section": "colors" },
+      { "name": "The Light-Ground Logo Rule", "body": "The logo is charcoal on transparent and only ever sits on white or stone: never on charcoal, green or a photo.", "section": "colors" },
+      { "name": "The Lettering Rule", "body": "Headings are always heavy uppercase Montserrat; tracking opens only on small labels, as with the logo's spaced ROOFING.", "section": "typography" }
+    ]
+  }
+}
